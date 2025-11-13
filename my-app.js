@@ -16,7 +16,7 @@ var app = new Framework7({
     },
     
     {
-      path: 'profile/',
+      path: '/profile/',
       url: 'profile.html',
 
     },
