@@ -1,63 +1,45 @@
-<!DOCTYPE html>
-<html>
+<div class="page profile-page" data-name="profile">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="title">Profil</div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#2196f3">
-  <title>My App</title>
-  <link rel="stylesheet" href="node_modules/framework7/framework7-bundle.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/framework7-icons/css/framework7-icons.css">
-</head>
-
-<body>
-  <div id="app">
-    <div class="view view-main">
-      <div data-name="home" class="page">
-        <div class="navbar">
-          <div class="navbar-bg"></div>
-          <div class="navbar-inner">
-            <div class="title">E-Desa</div>
-          </div>
-        </div>
-
-        <div class="toolbar tabbar toolbar-bottom">
-          <div class="toolbar-inner">
-
-            <a href="/home/" class="tab-link">
-              <i class="icon f7-icons">house_fill</i>
-            </a>
-
-            <a href="/edit/" class="tab-link">
-              <i class="icon f7-icons">pencil</i>
-            </a>
-
-            <a href="/book/" class="tab-link">
-              <i class="icon f7-icons">book_fill</i>
-            </a>
-
-            <a href="/profile/" class="tab-link ">
-              <i class="icon f7-icons">person_fill</i>
-              <link rel="stylesheet" href="profile.html">
-            </a>
-
-          </div>
-        </div>
-
-        <div class="page-content">
-          <p>Page content goes here</p>
-          <!-- Gunakan hash untuk navigation -->
-          <a href="profile.html" class="button">Profile Page</a>
-          <a href="about.html" class="button">About Page</a>
-        </div>
+      <!-- 🔥 Tombol Logout di pojok kanan -->
+      <div class="right">
+        <a id="btn-logout" class="link" style="color:#fff; background:#7d2cff; padding:6px 12px; border-radius:12px; font-size:14px;">
+          Logout
+        </a>
       </div>
+
     </div>
   </div>
 
-  <script type="text/javascript" src="node_modules/framework7/framework7-bundle.min.js"></script>
-  <script type="text/javascript" src="my-app.js"></script>
-</body>
+  <div class="page-content profile-content">
 
-</html>
+    <!-- Gunung di bagian paling atas -->
+    <div class="mountain"></div>
+
+    <!-- Avatar dan nama -->
+    <div class="profile-header">
+      <div class="avatar-circle">
+        <i class="f7-icons">person_circle</i>
+      </div>
+      <div class="profile-name">Dzaki Naufal</div>
+    </div>
+
+    <!-- Card putih -->
+    <div class="profile-card">
+      <label>Email</label>
+      <input type="text" value="dzaki2005@gmail.com" class="input-field">
+
+      <label>Progress</label>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
+      <p class="subtitle">
+        Desa yang maju dimulai dari warganya yang maju — ayo semangat!
+      </p>
+    </div>
+
+  </div>
+</div>
