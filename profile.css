@@ -1,0 +1,172 @@
+/* Background halaman */
+.profile-page {
+  background: #f3e8ff;
+}
+
+/* Navbar transparan */
+.navbar, .navbar-bg {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ✔ Gunung besar di atas */
+.mountain {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(180deg, #b96dff, #7d2cff);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  margin-bottom: -80px; /* tarik card ke atas */
+  position: relative;
+  z-index: 1;
+}
+
+/* ✔ Avatar di tengah gunung */
+.profile-header {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-top: -50px;
+}
+
+.avatar-circle {
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.avatar-circle i {
+  font-size: 50px;
+  color: #5a189a;
+}
+
+.profile-name {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4b0c84;
+}
+
+/* ✔ Card nempel ke gunung */
+.profile-card {
+  background: white;
+  width: 90%;
+  padding: 22px;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Label */
+.profile-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #5a189a;
+}
+
+/* Input */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #d0a3ff;
+  background: #f4eaff;
+  margin-bottom: 12px;
+}
+
+/* Progress */
+.progress-bar {
+  width: 100%;
+  height: 7px;
+  background: #e9d6ff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress {
+  width: 40%;
+  height: 100%;
+  background: #5a189a;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+
+/* Background full screen */
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(180deg, #9b10ff, #d020ff);
+  padding: 20px;
+}
+
+/* Card box putih */
+.login-box {
+  width: 90%;
+  max-width: 350px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 10px 22px rgba(0,0,0,0.15);
+}
+
+/* Logo */
+.login-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* Label */
+.form-group label {
+  font-size: 14px;
+  color: #5a5a5a;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input field */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #7b00b5;
+  color: white;
+  border-radius: 6px;
+  text-transform: none;
+  font-size: 15px;
+  border: none;
+}
+
+.login-button:active {
+  opacity: 0.8;
+}
+
