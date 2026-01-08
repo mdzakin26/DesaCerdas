@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#8A2BE2">
+    <title>E-Desa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@5.7.14/css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/framework7-icons/css/framework7-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/framework7-icons/css/framework7-icons.css">
+    <link rel="stylesheet" href="css/app.css">
+
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="view view-main view-init">
+
+            <!-- Halaman Login yang Dirapihkan -->
+            <div id="login-page" class="page">
+                <div class="login-container">
+                    <div class="login-card">
+
+                        <div class="login-image-center">
+                            <img src="img/edesa.jpg" alt="Logo E-Desa">
+                        </div>
+
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Nama Pengguna</label>
+                                <div class="input-with-icon">
+                                    <!-- <i class="fas fa-user"></i> -->
+                                    <input type="text" class="login-input" id="username"
+                                        placeholder="Masukkan nama pengguna">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Kata Sandi</label>
+                                <div class="input-with-icon">
+                                    <!-- <i class="fas fa-lock"></i> -->
+                                    <input type="password" class="login-input" id="password"
+                                        placeholder="Masukkan kata sandi">
+                                </div>
+                            </div>
+
+                            <button type="button" class="login-button" id="login-button">Masuk</button>
+
+                            <div class="error-message" id="login-error">Nama pengguna atau kata sandi salah</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Halaman Home -->
+            <div id="home-page" class="page page-hidden">
+                <div class="page-content">
+                    <!-- Welcome -->
+                    <div class="welcome-container">
+                        <div class="welcome-text" id="user-welcome">Selamat Datang di E-Desa</div>
+                        <div class="subtitle">Platform Pembelajaran Digital</div>
+                    </div>
+
+                    <!-- Card besar -->
+                    <div class="big-card">
+                        <div class="big-card-title">Tentang Aplikasi</div>
+                        <div class="big-card-content">
+                            Aplikasi E-Desa membantu masyarakat desa dalam mengakses materi pembelajaran dan quiz
+                            interaktif untuk meningkatkan pengetahuan.
+                        </div>
+                    </div>
+
+                    <!-- Grid 2x2 card -->
+                    <div class="small-grid">
+                        <div class="small-card">
+                            <div class="card-icon">
+                                <i class="f7-icons">question_square_fill</i>
+                            </div>
+                            <div>
+                                <div class="quiz-title">Quiz Interaktif</div>
+                                <div class="score-box">Score: 0</div>
+                            </div>
+                        </div>
+
+                        <div class="small-card">
+                            <div class="card-icon">
+                                <i class="f7-icons">book_fill</i>
+                            </div>
+                            <div>
+                                <div class="quiz-title">Materi Belajar</div>
+                                <div class="score-box">12 Materi</div>
+                            </div>
+                        </div>
+
+                        <div class="small-card">
+                            <div class="card-icon">
+                                <i class="f7-icons">graph_square_fill</i>
+                            </div>
+                            <div>
+                                <div class="quiz-title">Progress Belajar</div>
+                                <div class="score-box">60%</div>
+                            </div>
+                        </div>
+
+                        <div class="small-card">
+                            <div class="card-icon">
+                                <i class="f7-icons">trophy_fill</i>
+                            </div>
+                            <div>
+                                <div class="quiz-title">Pencapaian</div>
+                                <div class="score-box">5 Hadiah</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman Quiz -->
+            <div id="quiz-page" class="page page-hidden">
+                <div class="navbar page-navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link back navbar-back-link" id="quiz-back-button">
+                                <i class="icon f7-icons">arrow_left</i>
+                                <span>Kembali</span>
+                            </a>
+                        </div>
+                        <div class="title">Quiz Interaktif</div>
+                    </div>
+                </div>
+
+                <div class="page-content">
+                    <!-- Section Tingkat Kesulitan -->
+                    <div class="difficulty-section">
+                        <div class="section-title">Pilih Tingkat Kesulitan</div>
+
+                        <div class="difficulty-grid">
+                            <!-- Kartu Tingkat Mudah -->
+                            <div class="difficulty-card" data-difficulty="mudah">
+                                <div class="difficulty-header">
+                                    <div class="difficulty-level">Tingkat Kesulitan: Mudah</div>
+                                    <div class="difficulty-label">Pemula</div>
+                                </div>
+                                <div class="quiz-material">Materi Quiz: Pengenalan E-Desa</div>
+                                <div class="stars-container">
+                                    <div class="stars-label">Score:</div>
+                                    <div class="stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">☆</span>
+                                        <span class="star">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kartu Tingkat Sedang -->
+                            <div class="difficulty-card" data-difficulty="sedang">
+                                <div class="difficulty-header">
+                                    <div class="difficulty-level">Tingkat Kesulitan: Sedang</div>
+                                    <div class="difficulty-label">Menengah</div>
+                                </div>
+                                <div class="quiz-material">Materi Quiz: Fitur Utama E-Desa</div>
+                                <div class="stars-container">
+                                    <div class="stars-label">Score:</div>
+                                    <div class="stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kartu Tingkat Sulit -->
+                            <div class="difficulty-card" data-difficulty="sulit">
+                                <div class="difficulty-header">
+                                    <div class="difficulty-level">Tingkat Kesulitan: Sulit</div>
+                                    <div class="difficulty-label">Ahli</div>
+                                </div>
+                                <div class="quiz-material">Materi Quiz: Teknis Lanjutan E-Desa</div>
+                                <div class="stars-container">
+                                    <div class="stars-label">Score:</div>
+                                    <div class="stars">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman Materi Belajar -->
+            <div id="materi-page" class="page page-hidden">
+                <div class="navbar page-navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link back navbar-back-link" id="materi-back-button">
+                                <i class="icon f7-icons">arrow_left</i>
+                                <span>Kembali</span>
+                            </a>
+                        </div>
+                        <div class="title">Materi Belajar</div>
+                    </div>
+                </div>
+
+                <!-- text box di dalam materi -->
+                <div class="page-content">
+                    <div class="subject-list">
+                        <div class="subject-item" data-subject="jurnal">
+                            <div class="subject-header">
+                                <div class="subject-icon">
+                                    <i class="f7-icons">doc_text</i>
+                                </div>
+                                <div class="subject-title">Jurnal</div>
+                            </div>
+                            <div class="subject-desc">
+                                Pelajari Materi Materi Jurnal Desa secara mendalam dan interaktif.
+                            </div>
+                        </div>
+
+                        <div class="subject-item" data-subject="youtube">
+                            <div class="subject-header">
+                                <div class="subject-icon">
+                                    <i class="f7-icons">play_circle</i>
+                                </div>
+                                <div class="subject-title">Youtube</div>
+                            </div>
+                            <div class="subject-desc">
+                                Tingkatkan kemampuan belajar dengan materi yang ada di Youtube.
+                            </div>
+                        </div>
+
+                        <div class="subject-item" data-subject="artikel">
+                            <div class="subject-header">
+                                <div class="subject-icon">
+                                    <i class="f7-icons">book</i>
+                                </div>
+                                <div class="subject-title">Artikel</div>
+                            </div>
+                            <div class="subject-desc">
+                                Eksplorasi ilmu pengetahuan melalui artikel-artikel menarik seputar desa.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Halaman Detail Mata Pelajaran -->
+            <div id="detail-subject-page" class="page page-hidden">
+                <div class="navbar page-navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link back navbar-back-link" id="detail-subject-back-button">
+                                <i class="icon f7-icons">arrow_left</i>
+                                <span>Kembali</span>
+                            </a>
+                        </div>
+                        <div class="title" id="detail-subject-title">Materi Belajar</div>
+                    </div>
+                </div>
+
+                <div class="page-content">
+                    <div class="chapter-list" id="chapter-list">
+                        <!-- Daftar bab akan dimuat secara dinamis -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman Profil -->
+            <!-- Profil Page -->
+            <div id="profil-page" class="page page-hidden">
+                <!-- Navbar dengan logout di kanan -->
+                <div class="navbar page-navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link back navbar-back-link" id="profil-back-button">
+                                <i class="icon f7-icons">arrow_left</i>
+                                <span>Kembali</span>
+                            </a>
+                        </div>
+                        <div class="title">Profil Saya</div>
+                        <div class="right">
+                            <!-- Tombol logout di kanan -->
+                            <a href="#" class="link" id="logout-button-top" title="Keluar">
+                                <i class="f7-icons">power</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-content" style="padding-bottom:60px;">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <i class="f7-icons">person_fill</i>
+                        </div>
+                        <div class="profile-name" id="profile-name">Ahmad Santoso</div>
+                        <div class="profile-role">Admin@gmail.com</div>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-card">
+                            <div class="stat-value" id="profile-progress">0%</div>
+                            <div class="stat-label">Progress Belajar</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-value" id="profile-materi">0</div>
+                            <div class="stat-label">Materi Selesai</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-value" id="profile-quiz">0</div>
+                            <div class="stat-label">Quiz Diselesaikan</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-value" id="profile-achievement">0</div>
+                            <div class="stat-label">Pencapaian</div>
+                        </div>
+                    </div>
+
+
+                    <div class="profile-menu">
+                        <div class="menu-item" id="logout-button-menu">
+                            <div class="menu-icon">
+                                <i class="f7-icons">power_fill</i>
+                            </div>
+                            <div class="menu-text">Keluar</div>
+
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-icon">
+                                <i class="f7-icons">bell_fill</i>
+                            </div>
+                            <div class="menu-text">Notifikasi</div>
+                            <div class="menu-arrow">
+                                <i class="f7-icons">chevron_right</i>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-icon">
+                                <i class="f7-icons">question_circle_fill</i>
+                            </div>
+                            <div class="menu-text">Bantuan</div>
+                            <div class="menu-arrow">
+                                <i class="f7-icons">chevron_right</i>
+                            </div>
+                        </div>
+                        <div class="menu-item" id="reset-quiz-button">
+                            <div class="menu-icon">
+                                <i class="f7-icons">arrow_counterclockwise</i>
+                            </div>
+                            <div class="menu-text">Reset Quiz</div>
+                            <div class="menu-arrow">
+                                <i class="f7-icons">chevron_right</i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="achievement-page" class="page page-hidden" data-name="achievement">
+                <div class="page-content achievement-bg">
+
+                    <div class="block header-achv">
+                        <h2 class="title-achievement">Achievement Quiz</h2>
+                        <p class="subtitle-achievement">Lihat hasil dan progress dari setiap quiz yang telah kamu
+                            selesaikan.</p>
+                    </div>
+
+                    <div id="listAchievement" class="achievement-list"></div>
+
+                </div>
+            </div>
+
+
+            <!-- Halaman Detail Materi -->
+            <div id="detail-materi-page" class="page page-hidden">
+                <div class="navbar page-navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link back navbar-back-link" id="detail-materi-back-button">
+                                <i class="icon f7-icons">arrow_left</i>
+                                <span>Kembali</span>
+                            </a>
+                        </div>
+                        <div class="title" id="detail-materi-title">Detail Materi</div>
+                    </div>
+                </div>
+
+                <div class="page-content">
+                    <div class="material-detail">
+                        <div class="material-detail-title" id="materi-detail-title">Pengenalan E-Desa</div>
+                        <div class="material-detail-content" id="materi-detail-content">
+                            <p>E-Desa adalah aplikasi platform digital yang dirancang khusus untuk membantu masyarakat
+                                desa dalam mengakses informasi dan layanan desa secara mudah dan efisien.</p>
+
+                            <p>Aplikasi ini bertujuan untuk:</p>
+                            <ul>
+                                <li>Mempermudah akses informasi desa</li>
+                                <li>Meningkatkan partisipasi masyarakat</li>
+                                <li>Mempercepat layanan administrasi</li>
+                                <li>Mendorong transparansi pemerintahan desa</li>
+                            </ul>
+
+                            <p>Dengan E-Desa, masyarakat dapat dengan mudah mengakses berbagai layanan seperti informasi
+                                program desa, pengumuman resmi, serta fitur pembelajaran untuk meningkatkan pengetahuan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman Detail Quiz -->
+            <div id="detail-quiz-page" class="page page-hidden">
+                <div class="navbar page-navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link back navbar-back-link" id="detail-quiz-back-button">
+                                <i class="icon f7-icons">arrow_left</i>
+                                <span>Kembali</span>
+                            </a>
+                        </div>
+                        <div class="title" id="detail-quiz-title">Quiz</div>
+                    </div>
+                </div>
+
+                <div class="page-content">
+                    <div class="quiz-question">
+                        <div class="question-text" id="question-text">
+                            Apa tujuan utama aplikasi E-Desa?
+                        </div>
+
+                        <div class="answer-options">
+                            <div class="answer-option" data-answer="1">
+                                Untuk menghibur masyarakat desa
+                            </div>
+                            <div class="answer-option" data-answer="2">
+                                Untuk mempermudah akses informasi dan layanan desa
+                            </div>
+                            <div class="answer-option" data-answer="3">
+                                Untuk menggantikan pemerintahan desa
+                            </div>
+                            <div class="answer-option" data-answer="4">
+                                Untuk menarik investor ke desa
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-navigation">
+                        <button class="quiz-button" id="prev-question" disabled>Sebelumnya</button>
+                        <button class="quiz-button" id="next-question">Selanjutnya</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toolbar global - UNGU -->
+            <div class="toolbar toolbar-bottom tabbar tabbar-icons" id="main-toolbar">
+                <div class="toolbar-inner">
+
+                    <a href="#" class="tab-link tab-link-active" data-page="home">
+                        <i class="icon f7-icons">house_fill</i>
+                        <span class="tabbar-label">Beranda</span>
+                    </a>
+
+                    <a href="#" class="tab-link" data-page="materi">
+                        <i class="icon f7-icons">book_fill</i>
+                        <span class="tabbar-label">Materi</span>
+                    </a>
+
+                    <a href="#" class="tab-link" data-page="quiz">
+                        <i class="icon f7-icons">question_square_fill</i>
+                        <span class="tabbar-label">Quiz</span>
+                    </a>
+
+                    <a href="#" class="tab-link" data-page="achievement">
+                        <i class="icon f7-icons">rosette</i>
+                        <span class="tabbar-label">Achv</span>
+                    </a>
+
+                    <a href="#" class="tab-link profile-tab" data-page="profil">
+                        <i class="icon f7-icons">person_circle_fill</i>
+                        <span class="tabbar-label">Profil</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/framework7@5.7.14/js/framework7.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

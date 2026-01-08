@@ -1,0 +1,992 @@
+:root {
+    --primary-color: #8A2BE2;
+    --secondary-color: #5A2AB3;
+    --light-color: #F5F5F5;
+    --text-color: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+}
+
+/* Halaman Login yang Dirapihkan */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 20px;
+}
+
+.login-card {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-left-panel {
+    flex: 1;
+    background: linear-gradient(rgba(138, 43, 226, 0.9), rgba(90, 42, 179, 0.9));
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.login-logo i {
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+.login-tagline {
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.login-features {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.login-features li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.login-features i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.login-right-panel {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-header h2 {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    /* lebih dekat ke input */
+    color: #555;
+    /* warna label sedikit lebih gelap */
+    font-weight: 600;
+    /* sedikit lebih tebal */
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    /* ikon lebih dekat ke kiri */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    /* sedikit lebih besar */
+    color: #666;
+    pointer-events: none;
+    /* warna ikon lebih netral */
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px 15px 12px 50px;
+    border: 1px solid #ccc;
+    /* border sedikit lebih soft */
+    border-radius: 8px;
+    /* sudut lebih halus */
+    font-size: 15px;
+    /* ukuran font tetap */
+    background: #fdfdfd;
+    /* warna background lebih terang */
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+    /* menyesuaikan dengan label */
+}
+
+.login-input::placeholder {
+    color: #aaa;
+    /* warna teks placeholder */
+    font-style: italic;
+    /* bikin miring (opsional) */
+    font-size: 14px;
+    /* ukuran teks placeholder */
+    opacity: 1;
+    /* pastikan tetap terlihat di semua browser */
+    margin-left: 40px;
+    /* menyesuaikan dengan label */
+}
+
+
+.login-input:focus {
+    border-color: var(--primary-color);
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+    /* efek shadow lebih terlihat */
+    outline: none;
+}
+
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+}
+
+.remember input {
+    width: auto;
+    margin-right: 8px;
+
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.login-button:hover {
+    background: var(--secondary-color);
+}
+
+
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+}
+
+.login-image-center {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login-image-center img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+
+/* Responsif untuk halaman login */
+@media (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+    }
+
+    .login-left-panel {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .login-right-panel {
+        padding: 30px;
+    }
+}
+
+/* Gaya untuk halaman aplikasi yang sudah ada */
+.page-content {
+    background: white;
+    border-radius: 25px 25px 0 0;
+    margin: 0;
+    padding: 25px;
+    padding-bottom: 80px;
+    min-height: auto;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-container {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 15px 0;
+}
+
+.welcome-text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.big-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: white;
+    box-shadow: 0 6px 12px rgba(138, 43, 226, 0.3);
+}
+
+.big-card-title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.big-card-content {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.small-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.small-card {
+    background: white;
+    border-radius: 15px;
+    height: 120px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.small-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.score-box {
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 12px;
+    align-self: flex-start;
+}
+
+.card-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+/* Section Tingkat Kesulitan */
+.difficulty-section {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.difficulty-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.difficulty-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.difficulty-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.difficulty-level {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.difficulty-label {
+    background: #f0f0f0;
+    color: #666;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.quiz-material {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.stars-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.stars-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.stars {
+    display: flex;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 18px;
+    margin-left: 2px;
+}
+
+/* Halaman Mata Pelajaran */
+.subject-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subject-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.subject-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subject-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.subject-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.subject-title {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.subject-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Halaman Profil */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+.profile-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.profile-role {
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.menu-text {
+    font-weight: 500;
+    color: var(--text-color);
+    flex: 1;
+}
+
+.menu-arrow {
+    color: #999;
+    font-size: 16px;
+}
+
+/* Toolbar styling - UNGU */
+.toolbar {
+    background: var(--primary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    height: 60px;
+}
+
+.tab-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 0;
+    transition: color 0.2s;
+}
+
+.tab-link-active {
+    color: white;
+}
+
+.tab-link i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.tabbar-label {
+    color: inherit;
+    font-size: 12px;
+}
+
+/* Navbar untuk halaman */
+.page-navbar {
+    background: var(--primary-color);
+}
+
+.page-navbar .title {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.navbar-back-link {
+    color: white;
+}
+
+/* Hidden class untuk menyembunyikan halaman */
+.page-hidden {
+    display: none;
+}
+
+/* Halaman Detail Materi */
+.material-detail {
+    padding: 20px 0;
+}
+
+.material-detail-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.material-detail-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.material-detail-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Halaman Detail Quiz */
+.quiz-question {
+    margin-bottom: 25px;
+}
+
+.question-text {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-option {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.2s;
+}
+
+.answer-option:active {
+    transform: scale(0.98);
+}
+
+.answer-option.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(138, 43, 226, 0.05);
+}
+
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.quiz-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.quiz-button:active {
+    transform: scale(0.95);
+}
+
+.quiz-button:disabled {
+    background: #ccc;
+    color: #666;
+}
+
+/* Chapter List */
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.chapter-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chapter-icon {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+.chapter-title {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.chapter-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+.achievement-bg {
+    background: #fff;
+    min-height: 100%;
+    padding-bottom: 40px;
+}
+
+/* Header */
+.header-achv {
+    text-align: center;
+    color: #5A2AB3;
+}
+
+.title-achievement {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.subtitle-achievement {
+    margin-top: -10px;
+    color: #8A2BE2;
+}
+
+/* Card style */
+.achv-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px 15px;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease-in-out;
+}
+
+.achv-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+/* Left content */
+.achv-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.trophy-icon {
+    font-size: 40px;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.achv-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5A2AB3;
+}
+
+.achv-score {
+    font-size: 14px;
+    color:#8A2BE2;
+    margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+    padding: 8px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: .5px;
+    color: #8A2BE2;
+}
+
+.gold {
+    background: linear-gradient(45deg, #ffe066, #f1b300);
+    box-shadow: 0 0 10px #ffdf70;
+}
+
+.silver {
+    background: linear-gradient(45deg, #dfe4ea, #b5bcc4);
+    color: #222;
+    box-shadow: 0 0 10px #cfd4da;
+}
+
+.bronze {
+    background: linear-gradient(45deg, #d99559, #b67840);
+    box-shadow: 0 0 10px #d59a60;
+}
+
+.none {
+    background: rgba(255, 255, 255, 0.35);
+    color: #444;
+}
+
+/* Animation */
+.fade-in {
+    animation: fade 0.6s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#logout-button-top i {
+    font-size: 22px;
+    color: red;
+    /* biar terlihat */
+}
+
+.navbar .right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.custom-tabbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* =========================
+   FIX TABBAR BAWAH BIAR JELAS
+========================= */
+
+/* Toolbar bawah */
+.toolbar.toolbar-bottom {
+    height: 72px;
+    background: linear-gradient(135deg, #8A2BE2, #5A2AB3);
+    box-shadow: 0 -6px 18px rgba(0,0,0,.35);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Container tab */
+.toolbar-bottom .toolbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Semua tab */
+.toolbar-bottom .tab-link {
+    color: rgba(255,255,255,.75);
+    font-weight: 500;
+}
+
+/* Icon */
+.toolbar-bottom .tab-link i {
+    font-size: 22px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+/* Label */
+.toolbar-bottom .tabbar-label {
+    font-size: 11px;
+}
+
+/* ACTIVE TAB */
+.toolbar-bottom .tab-link-active {
+    color: #fff;
+}
+
+/* Icon aktif dibuat MENYALA */
+.toolbar-bottom .tab-link-active i {
+    color: #00f2ff;
+    text-shadow: 0 0 10px rgba(0,242,255,.9);
+}
+
+/* Label aktif */
+.toolbar-bottom .tab-link-active .tabbar-label {
+    color: #00f2ff;
+    font-weight: 600;
+}
+
+/* PROFIL TAB (KANAN) */
+.toolbar-bottom .profile-tab {
+    position: relative;
+}
+
+.toolbar-bottom .profile-tab i {
+    font-size: 26px;
+}
+
+/* Biar konten gak ketutup tabbar */
+.page-content {
+    padding-bottom: 100px !important;
+}
+
+#reset-quiz-button .menu-icon i {
+    color: #e67e22;
+}
+
+#reset-quiz-button .menu-text {
+    color: #e67e22;
+    font-weight: 600;
+}
